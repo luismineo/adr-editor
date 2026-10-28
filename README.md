@@ -33,6 +33,18 @@ For development with hot reload:
 npm run dev
 ```
 
+## Docker
+
+```sh
+docker compose up -d --build
+```
+
+The database is kept in the `adr-data` volume. The port is published on `127.0.0.1` only, and because the server checks the `Host` header, the host and container ports must match. To use another port, set `PORT` rather than editing the mapping:
+
+```sh
+PORT=4000 docker compose up -d
+```
+
 ## Configuration
 
 | Variable      | Default       | Description                           |
