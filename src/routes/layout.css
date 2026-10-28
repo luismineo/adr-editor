@@ -29,6 +29,10 @@
 	--color-secondary-700: #334155;
 	--color-secondary-800: #1e293b;
 	--color-secondary-900: #0f172a;
+
+	/* Flowbite's plugin colors placeholders with this token, which normally comes from its theme
+	   stylesheet. Without it, light mode placeholders inherit the input's text color. */
+	--color-body: var(--color-gray-500);
 }
 
 .cm-editor {
