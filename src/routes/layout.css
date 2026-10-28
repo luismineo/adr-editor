@@ -35,6 +35,18 @@
 	--color-body: var(--color-gray-500);
 }
 
+/* Tailwind v4 defaults borders to currentcolor. Flowbite's table rows and our own markup only set a
+   border color for dark mode, so restore v3's gray-200 default for light mode. */
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+}
+
 .cm-editor {
 	height: 100%;
 	font-size: 0.875rem;
